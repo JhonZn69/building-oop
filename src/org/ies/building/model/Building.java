@@ -31,6 +31,15 @@ public class Building {
         }
     }
 
+    public Owner[] findApartmentOwners(int floor, String door) {
+        var apartment = findApartment(floor, door);
+        if (apartment == null) {
+            return null;
+        } else {
+            return apartment.getOwners();
+        }
+    }
+
     public String getAddress() {
         return address;
     }
