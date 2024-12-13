@@ -15,6 +15,6 @@ public class Main {
 
         var building  = buildingReader.read();
 
-        System.out.println(building);
+        building.showFloorApartments(1);
     }
 }
