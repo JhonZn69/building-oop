@@ -1,6 +1,7 @@
 package org.ies.building;
 
 import org.ies.building.components.ApartmentReader;
+import org.ies.building.components.BuildingApp1;
 import org.ies.building.components.BuildingReader;
 import org.ies.building.components.OwnerReader;
 
@@ -12,9 +13,9 @@ public class Main {
         var ownerReader = new OwnerReader(scanner);
         var apartmentReader = new ApartmentReader(scanner, ownerReader);
         var buildingReader = new BuildingReader(scanner, apartmentReader);
+        var buildingApp = new BuildingApp1(scanner, buildingReader);
 
-        var building  = buildingReader.read();
+        buildingApp.run();
 
-        building.showFloorApartments(1);
     }
 }
