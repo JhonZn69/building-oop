@@ -1,5 +1,6 @@
 package org.ies.building.components;
 
+
 import org.ies.building.model.Owner;
 
 import java.util.Scanner;
